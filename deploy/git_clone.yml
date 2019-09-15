@@ -23,5 +23,6 @@
     - name: Copy Private Key
       copy: src="/home/hkothari/.ssh/id_rsa" dest={{homeDir}} mode=0600
     - name: Clone the repository
-      git: repo="https://github.com/HemaSree1519/SaveNoteApp.git" dest={{ release_path }} update=yes force=yes accept_hostkey=yes key_file={{homeDir}}/id_rsa
+      git: repo="https://github.com/HemaSree1519/CodingChallenge-GoogleKeep.git" dest={{ release_path }} update=yes force=yes accept_hostkey=yes key_file={{homeDir}}/id_rsa
+
 

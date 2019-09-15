@@ -8,7 +8,9 @@
         upgrade: dist
         update_cache: yes
         cache_valid_time: 86400 #One day
-    - name: Install jdk
-      apt:
-        name: default-jdk
-        state: latest
+    - name: Install packages
+      apt: name={{item}} state=installed
+      with_items:
+          - default-jdk
+          - docker.io
+          - docker-compose
