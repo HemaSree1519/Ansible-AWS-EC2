@@ -12,5 +12,6 @@
       apt: name={{item}} state=installed
       with_items:
           - default-jdk
+          - python-pip
           - docker.io
           - docker-compose

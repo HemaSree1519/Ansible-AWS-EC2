@@ -57,3 +57,18 @@ ec2-3-0-92-33.ap-southeast-1.compute.amazonaws.com : ok=3    changed=0    unreac
 
 [hkothari@hema-linux Ansible(EC2)]$ 
 ```
+**Installed python-pip**
+```bash
+[hkothari@hema-linux Ansible(EC2)]$ ansible-playbook deploy/google_keep_main.yml -e 'ansible_python_interpreter=/usr/bin/python2'
+ [WARNING]: Ignoring invalid attribute: restarted
+
+
+PLAY [prod] ************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] *************************************************************************************************************************************************************
+fatal: [ec2-52-76-140-63.ap-southeast-1.compute.amazonaws.com]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Shared connection to ec2-52-76-140-63.ap-southeast-1.compute.amazonaws.com closed.\r\n", "module_stdout": "\r\n/bin/sh: 1: /usr/bin/python2: not found\r\n", "msg": "MODULE FAILURE", "rc": 0}
+        to retry, use: --limit @/home/hkothari/Desktop/Muruga/Everest/Ansible(EC2)/deploy/google_keep_main.retry
+
+[hkothari@hema-linux Ansible(EC2)]$ 
+
+```
