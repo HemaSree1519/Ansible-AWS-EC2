@@ -113,3 +113,13 @@ ec2-52-76-140-63.ap-southeast-1.compute.amazonaws.com : ok=9    changed=6    unr
 [hkothari@hema-linux Ansible(EC2)]$
 
 ```
+## Ansible Vault
+
+**Encrypt hosts file**
+```bash
+ansible-vault encrypt hosts
+```
+**Decrypt vault files at runtime**
+```bash
+ansible-playbook deploy/google_keep_main.yml --ask-vault-pass -e 'ansible_python_interpreter=/usr/bin/python2.7'
+```
